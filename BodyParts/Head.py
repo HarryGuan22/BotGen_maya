@@ -5,9 +5,8 @@ class Head(object):
     def __init__(self, head_type):
         self.index = random.randint(0, (len(head_list)-1))
         # self.geo = cmds.ls('head_geo_1')[0]
-        self.name = 'head'
+        self.name = head_list[self.index]
         self.head_type = head_type
-        print('The head type is ' + self.head_type)
         
     def build(self):
         loc_neck = cmds.ls('tg1_loc1')[0]
